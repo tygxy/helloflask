@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ user.username }}'s Watchlist </title>
+</head>
+<body>
+<a href="{{ url_for('watchlist') }}">&larr; Return</a>
+<h2>
+    <img src="{{ url_for('static', filename='avatar.jpg')}}" width="50">{{ user.username }}
+</h2>
+{% if user.bio %}
+    <i>{{ user.bio }}</i>
+{% else %}
+    <i>This user has not provided a bio</i>
+{% endif %}
+
+{# 下面是电影清单 #}
+<h5>{{ user.username}}'s watchlist ({{ movies|length }}):</h5>
+<ul>
+    {% for item in movies %}
+        {% if item.year is is_year %}
+            <li>{{ item.name }} | {{ item.year}} | {{ item.name|musical }}</li>
+        {% else %}
+            <li>{{ item.name }} | {{ item.year}}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+<h1>{{ foo }}</h1>
+<h1>{{ bar() }}</h1>
+
+{# 下面是电影清单 #}
+</body>
+</html>
