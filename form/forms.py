@@ -55,3 +55,15 @@ class RegisterForm(FlaskForm):
     email = StringField('Emails', validators=[DataRequired(), Length(1, 254), Email()])
     password = PasswordField('Password', validators=[DataRequired(), Length(8, 128)])
     submit2 = SubmitField('Register')
+
+class SigninForm2(FlaskForm):
+    username = StringField('Username', validators=[DataRequired(), Length(1, 20)])
+    password = PasswordField('Password', validators=[DataRequired(), Length(8, 128)])
+    submit = SubmitField('Sign in')
+
+
+class RegisterForm2(FlaskForm):
+    username = StringField('Username', validators=[DataRequired(), Length(1, 20)])
+    email = StringField('Emails', validators=[DataRequired(), Length(1, 254), Email()])
+    password = PasswordField('Password', validators=[DataRequired(), Length(8, 128)])
+    submit = SubmitField('Register')

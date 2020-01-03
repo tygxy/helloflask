@@ -122,15 +122,15 @@ def multi_form():
 #  单个页面多个表单----多视图处理
 @app.route('/multi-form-multi-view')
 def multi_form_multi_view():
-    signin_form = SigninForm()
-    register_form = RegisterForm()
+    signin_form = SigninForm2()
+    register_form = RegisterForm2()
     return render_template('2form2view.html', signin_form=signin_form, register_form=register_form)
 
 
 @app.route('/handle-signin', methods=['POST'])
 def handle_signin():
-    signin_form = SigninForm()
-    register_form = RegisterForm()
+    signin_form = SigninForm2()
+    register_form = RegisterForm2()
 
     if signin_form.validate_on_submit():
         username = signin_form.username.data
@@ -142,12 +142,12 @@ def handle_signin():
 
 @app.route('/handle-register', methods=['POST'])
 def handle_register():
-    signin_form = SigninForm()
-    register_form = RegisterForm()
+    signin_form = SigninForm2()
+    register_form = RegisterForm2()
 
     if register_form.validate_on_submit():
         username = register_form.username.data
-        flash('%s, you just submit sign in button' % username)
+        flash('%s, you just submit register button' % username)
         return redirect(url_for('index'))
 
     return render_template('2form2view.html', signin_form=signin_form, register_form=register_form)
