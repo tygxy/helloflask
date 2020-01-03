@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+
+        <title>{% block title %} DataBases - helloflask {% endblock title%}</title>
+
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        {% block styles %}
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css' ) }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        {% endblock styles%}
+    {% endblock head %}
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="{{ url_for('index')}}">Home</a>
+            </li>
+            <li>
+                <a href="{{ url_for('basic')}}">Basic</a>
+            </li>
+            <li>
+                <a href="{{ url_for('validation')}}">Validation</a>
+            </li>
+            <li>
+                <a href="{{ url_for('upload')}}">Upload</a>
+            </li>
+            <li>
+                <a href="{{ url_for('uploads')}}">Uploads</a>
+            </li>
+            <li>
+                <a href="{{ url_for('two_submit')}}">two_submit</a>
+            </li>
+            <li>
+                <a href="{{ url_for('multi_form')}}">multi-form</a>
+            </li>
+            <li>
+                <a href="{{ url_for('multi_form_multi_view')}}">multi-form-multi-view</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        {% for message in get_flashed_messages() %}
+            <div class="alert"> {{ message }}</div>
+        {% endfor %}
+
+        {% block content %}
+
+        {% endblock content%}
+    </main>
+
+    <footer>
+        {% block footer %}
+        <small> &copy; 2019 Xingyu Guo </small>
+        {% endblock footer%}
+    </footer>
+    {% block scripts %}
+
+    {% endblock scripts%}
+</body>
+</html>

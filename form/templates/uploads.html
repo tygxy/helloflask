@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import form_field %}
+
+{% block content %}
+<h2>Uploader Example</h2>
+<div class="basic-body">
+    <form method="post", enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <div class="form-group">
+            {{ form.photos.label }}<br>
+            {{ form.photos(multiple="multiple") }}<br>
+            {% if form.photos.errors %}
+                {% for error in form.photos.errors %}
+                    <small class="error">{{ error }}</small><br>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div>
+             {{ form.submit(class='btn btn-primary') }}
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
+
