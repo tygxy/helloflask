@@ -1,0 +1,7 @@
+bootstrap-flask
+flask
+flask-wtf
+flask-sqlalchemy
+flask-moment
+faker
+python-dotenv
