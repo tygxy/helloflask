@@ -1,0 +1,13 @@
+werkzeug
+wtforms
+sqlalchemy
+click
+bootstrap-flask
+flask
+flask-wtf
+flask-sqlalchemy
+flask-moment
+faker
+python-dotenv
+flask_ckeditor
+flask-login

@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+bootstrap-flask = "*"
+flask = "*"
+flask-wtf = "*"
+flask-sqlalchemy = "*"
+flask-moment = "*"
+faker = "*"
+python-dotenv = "*"
+flask-ckeditor = "*"
+flask-login = "*"
+
+[requires]
+python_version = "3.7"
