@@ -1,0 +1,16 @@
+click
+wtforms
+werkzeug
+bootstrap-flask
+flask
+flask-wtf
+flask-sqlalchemy
+flask-moment
+faker
+python-dotenv
+flask-login
+pillow
+flask_ckeditor
+flask_dropzone
+flask-avatars
+flask-whooshee

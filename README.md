@@ -9,3 +9,4 @@
 - form        表单
 - sayhello    留言板
 - blueblog    个人博客
+- albumy      图片社交
