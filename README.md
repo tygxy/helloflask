@@ -11,3 +11,4 @@
 - blueblog    个人博客
 - albumy      图片社交
 - test        a test
+- test2
