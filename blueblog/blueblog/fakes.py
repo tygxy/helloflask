@@ -10,7 +10,7 @@ def fake_admin():
     admin = Admin(
         username='admin',
         blog_title='BlueBlog',
-        blog_sub_title='this is a test',
+        blog_sub_title='this is a tests',
         name='Xingyu Guo',
         about='Um, l, Mima Kirigoe, had a fun time as a member of CHAM...'
     )

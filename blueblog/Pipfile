@@ -15,6 +15,8 @@ faker = "*"
 python-dotenv = "*"
 flask-ckeditor = "*"
 flask-login = "*"
+flask-bootstrap = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
